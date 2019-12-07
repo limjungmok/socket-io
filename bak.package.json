@@ -1,0 +1,29 @@
+{
+  "name": "0003_catchmind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch.ts": "nodemon --watch src --delay 1 --exec 'ts-node' src/Main.ts",
+    "build": "webpack --config ./build-config/webpack.config.js",
+    "a1)watch.webpack": "webpack -w --config ./build-config/webpack.config.js",
+    "a2)watch.bundle": "nodemon --watch ./dist/bundle.js ./dist/bundle.js"
+  },
+  "dependencies": {
+    "@types/ejs": "^2.6.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^10.12.18",
+    "awesome-typescript-loader": "^5.2.1",
+    "nodemon": "^1.18.9",
+    "source-map-loader": "^0.2.4",
+    "ts-node": "^8.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

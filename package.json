@@ -1,0 +1,26 @@
+{
+  "name": "0003_catchmind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./build-config/webpack.config.js",
+    "1_watch.webpack": "webpack -w --config ./build-config/webpack.config.js",
+    "2_watch.bundle": "nodemon --watch ./dist/bundle.js ./dist/bundle.js"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.12",
+    "@types/socket.io": "^2.1.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1",
+    "socket.io": "^2.3.0",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAT APP</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js" crossorigin="anonymous"></script>
+  <script>
+    const socket = io('http://localhost:8011', { autoConnect: false });
+    socket.open();
+    socket.on('connect', (e)=>{
+      console.log('[Client CHAT APP 서버와 연결되었습니다]');
+      socket.emit('enterance', 'CHAT', +location.href.split('?chatRoom=')[1]);
+    });
+
+    socket.on('msg', (obj) => {
+      console.log('[서버에서 메세지를 보내왔습니다]', JSON.stringify(obj));
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>
